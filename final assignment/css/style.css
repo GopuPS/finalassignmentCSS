@@ -1,0 +1,333 @@
+html{scroll-behavior: smooth;}
+body{margin: 0px;}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Oswald', sans-serif;
+}
+p,a,li,td{
+    font-family: 'Golos Text', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+/** header before scroll**/
+.menu-row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 125px;
+    position: fixed;
+    z-index: 9999;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 1);
+    transition: all .25s ease;
+}
+.menu-row .logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.menu-row .logo > div{
+    height: 115px;
+    transition: all .25s linear;
+}
+.menu-row .logo img{
+    height: 100%;
+    width: auto;
+}
+.menu{
+    display: flex;
+    list-style: none;
+    padding: 30px;
+}
+      /*for navigation links */
+.menu li a {
+    color: #0d0d0d;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+      /* a to hover*/
+.menu li a:hover {
+    background-color: #0d0d0d;
+    color: #f7f7f7;
+}
+ /** the two section is active when the  scroll is grater than 75px**/
+.scrolled-menu{
+    background-color: #0e0e0e;
+}
+.scrolled-menu li a{
+    color: #f4f4f4;
+}
+.scrolled-menu li a:hover{
+    color: #0d0d0d;
+    background-color: #f7f7f7;
+}
+/* Slider */
+.masthead-slider{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  }
+  .masthead-slider .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .masthead-slider .slide h2{
+    width: 100%;
+    color: rgba(255, 255, 255, .3
+    );
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .7);
+    margin: 0px;
+    font-size: 68px;
+  }
+.slide1{
+    background-image: url("../img/Slide1.jpg");
+    display: block;
+  }
+  .slide2{
+    background-image: url("../img/Slide2.jpeg");
+    display: block;
+  }
+  .slide3{
+    background-image: url("../img/slide3.jpg");
+    display: block;
+}
+
+ /* Tabs */
+ .tabs-row{
+    padding: 10% 5%;
+    background-color: #f6f6f6;
+  }
+  h2{
+    font-weight: 200;
+    font-size: 3em;
+    color: #060606;
+    text-align: center;
+  }
+  .tabs{
+    margin-top: 40px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .tab-list{
+    padding-bottom: 25px;
+  }
+  .tab{
+    border: 1px solid transparent;
+    border-radius: 40px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 30px;
+    color: rgba(87, 87, 87, 0.2);
+    font-weight: 700;
+    background-color: rgba(10, 20, 30, .2);
+  }
+  .tab.active{
+    color: #0b0b0b;
+    background-color: rgba(73, 73, 73, 0.1);
+    border: 1px solid rgba(171, 108, 108, 0.6);
+  }
+  .tab-content{
+    background-color: #9d9d9d;
+    display: none;
+    padding: 25px;
+    color: #0e0e0e;
+  }
+  .show{
+    display: block;
+  }
+
+
+  .projects{
+    margin-top: 240px;
+  }
+  
+  
+  
+  /* CSS for the main container */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 220px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+   h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #047387;
+    text-align: center;
+   }
+  
+  /* CSS for each card */
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    background-color: transparent;
+    transition: transform 0.3s, background-image 0.3s;
+    cursor: pointer;
+    height: 250px;
+  }
+  
+  /* CSS for the card title */
+  .card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #702170;
+  }
+  
+  /* CSS for the card paragraph */
+  .card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    align-items: center;
+    color: #1b828b;
+    font-weight: bold;
+  }
+  
+  /* Custom CSS to arrange the first two cards in one row */
+  .card:nth-child(1),
+  .card:nth-child(2) {
+    grid-column: span 1;
+  }
+  
+  /* Custom CSS to create a new row for the remaining cards */
+  .card:nth-child(3),
+  .card:nth-child(4) {
+    grid-column: span 1;
+    grid-row-start: 2;
+  }
+  
+  
+  .card:nth-child(2):hover {
+    transition: transform 0.3s, background-image 0.3s;
+    background-image: url('./cardBgIMG.jpeg'); 
+    background-size: cover;
+    background-position: center;
+  }
+  .card:nth-child(3):hover {
+    transition: transform 0.3s, background-image 0.3s;
+    background-image: url('./cardBgIMG.jpeg'); 
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card:nth-child(4):hover {
+    transition: transform 0.3s, background-image 0.3s;
+    background-image: url('./cardBgIMG.jpeg'); 
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* CSS for card hover effect */
+  .card:nth-child(1):hover {
+    transition: transform 0.3s, background-image 0.3s;
+    background-image: url('./cardBgIMG.jpeg'); 
+    background-size: cover;
+    background-position: center;
+  }
+
+  .thankyouGif{
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  }
+
+  /* CSS for the contact section */
+.contact {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* CSS for the contact information container */
+  .contactInformation {
+    max-width: 400px;
+  }
+  
+  /* CSS for the contact information heading */
+  .contactInformation h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* CSS for the contact information paragraph */
+  .contactInformation p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* CSS for the smaller text in contact information */
+  .smallerTextContact {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  /* CSS for the social icons */
+  .socialIcons {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .socialIcons li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .socialIcons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .socialIcons a:hover img {
+    transform: scale(1.2);
+  }
+
+
+  /* CSS for the footer */
+  footer {
+    background-color: #e1e2e1;
+    color: #121113;
+    padding: 7px;
+    text-align: center;
+  }
+  
+  
+  /* CSS for the text inside the footer */
+  footer p {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    
+  }
